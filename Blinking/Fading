@@ -1,0 +1,32 @@
+/* Program written by Luis Weatherhead on Jan 13, 2020
+ *  Blink exmaple into pin 13
+ */
+ int ledPin = 11;
+ 
+void setup() {
+  pinMode(13, OUTPUT);
+pinMode(12, OUTPUT);
+}
+
+
+void loop() {
+  digitalWrite(13, HIGH); // Turn Green light ON
+  delay(1000); // Delay for 1000 ms
+  digitalWrite(13, LOW); // Turn Green light OFF
+  delay(1000);
+  digitalWrite(12, HIGH); // Turn Yellow light on
+  delay(1000);
+  digitalWrite(12, LOW); // Turn Yellow Light off
+  delay(1000);
+  
+  
+   for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 5){
+  analogWrite(11, fadeValue);
+  delay(30);
+   }
+ 
+  for (int fadeValue = 255 ; fadeValue >= 0; fadeValue -= 5){
+  analogWrite(11, fadeValue);
+  delay(30);
+  }
+  
