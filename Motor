@@ -1,0 +1,30 @@
+// Code Written by Luis Weatherhead Feb. 5 2020
+//
+int pos =0;
+
+
+const int buttonPin = 2;
+
+int buttonState = 0;
+
+void setup() {
+    
+pinMode(11, OUTPUT);  
+pinMode(12, OUTPUT);
+pinMode(2, INPUT);
+pinMode(buttonPin, INPUT);
+
+}
+void loop() {
+
+    buttonState = digitalRead(buttonPin);
+    
+    if (buttonState == 0) {
+      digitalWrite(11, HIGH);
+      digitalWrite(12, LOW);
+      
+    } else 
+    
+      digitalWrite(11, LOW);
+      digitalWrite(12, HIGH);
+    }
